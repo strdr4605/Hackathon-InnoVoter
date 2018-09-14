@@ -1,0 +1,35 @@
+body {
+  background-color: #191919;
+  padding: 0;
+  margin: 0;
+}
+
+#presence {
+  background-color: #FAF151;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#presence #amount {
+  font-size: 100px;
+}
+
+#progressBar {
+  width: 90%;
+  margin: 10px auto;
+  height: 10px;
+  background-color: #0A5F44;
+}
+
+#progressBar div {
+  height: 100%;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 10px; /* same as #progressBar height if we want text middle aligned */
+  width: 0;
+  background-color: #CBEA00;
+  box-sizing: border-box;
+  font-size: 8px;
+}
