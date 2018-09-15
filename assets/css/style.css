@@ -34,7 +34,7 @@ body {
   height: 22px;
   margin: 0;
   background-color: transparent;
-  background-image: url("../assets/images/line.png");
+  background-image: url("../images/line.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: visible;
@@ -68,9 +68,9 @@ body {
 }
 
 #dropdown {
-  background-image: url("../assets/images/dropdownbox.jpg");
+  background-image: url("../images/dropdownbox.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 7%;
+  width: 10%;
   height: 4%;
 }
