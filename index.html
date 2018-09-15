@@ -2,13 +2,14 @@
   <head>
     <title>InnoVoter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     <div id="presence">
       <div id="amount">1,578,762</div>
       <div id="percentage">47.3%</div>
       <div id="graph">
+        <canvas id="myChart" width="400" height="400"></canvas>
         <div class="progress">
           <div class="progress-bar">
           </div>
@@ -31,6 +32,8 @@
             <li>20:00</li> -->
             <li id="end-hour">21:00</li>
           </ul>
+          <div id="dropdown">
+            </div>
       </div>
       
     </div>
@@ -40,5 +43,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="assets/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/chart.js"></script>
 </html>
