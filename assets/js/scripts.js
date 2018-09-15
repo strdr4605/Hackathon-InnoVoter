@@ -26,3 +26,55 @@ $('#dropdown').click(() => {
   $('.progress-bar p').toggleClass('hide');
   $('#dropdown').toggleClass('rotate');
 });
+
+$(function() {
+  $('.map').maphilight();
+  $('#map2').hide();
+  $('#map3').hide();
+  $('#find').hide();
+  $('#partids').hide();
+});
+
+$('area').click((evt) => {
+  let name = (evt.target.alt).split(' ')[2];
+  $('#disname').html(`Circumscriptia ${name}`);
+  $('#info').show();
+});
+
+$('#closebtn').click((evt) => {
+  $('#info').hide();
+});
+
+$('#btn1').click(() => {
+  $('.map').show();
+  $('#map2').hide();
+  $('#map3').hide();
+});
+
+$('#btn2').click(() => {
+  $('.map').hide();
+  $('#map2').show();
+  $('#map3').hide();
+});
+
+$('#btn3').click(() => {
+  $('.map').hide();
+  $('#map2').hide();
+  $('#map3').show();
+});
+
+$('.but').click(() => {
+  $('#find').show();
+});
+
+$('#find').click(() => {
+  $('#find').hide();
+});
+
+$('#res-pro').click(() => {
+  $('#partids').show();
+});
+
+$('#partids').click(() => {
+  $('#partids').hide();
+});
