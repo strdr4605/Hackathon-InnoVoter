@@ -2,10 +2,26 @@ let ctx = document.getElementById("myChart").getContext('2d');
 let hours = Math.floor((curentTime - beginningTime) / 60) + 1;
 
 function chartValues(hours) {
-  let dataArray = [];
-  for (let i = 0; i < hours; i++) {
-    dataArray.push(Math.floor(Math.random() * 10000));
-  }
+  let dataArray = [
+    0,
+    108762,
+    92114,
+    76890,
+    112422,
+    98092,
+    89711,
+    88324,
+    104911,
+    65848,
+    87013,
+    91364,
+    105154,
+    99814,
+    56741
+  ];
+  // for (let i = 0; i < hours; i++) {
+  //   dataArray.push(Math.floor(Math.random() * 10000));
+  // }
   return dataArray;
 }
 
@@ -31,7 +47,7 @@ let myChart = new Chart(ctx, {
     ],
     datasets: [{
       label: 'Numarul de Votanti',
-      data: chartValues(hours),
+      data: chartValues(hours).slice(0, hours),
       backgroundColor: [
         'rgba(88,137,192,0.38)'
       ],
@@ -67,3 +83,21 @@ let myChart = new Chart(ctx, {
     }
   }
 });
+
+function commaMagic (value) {
+  let d = value.toString().split('.')
+  let e = d[0].split('').reverse().join('')
+  e = e.match(/.{1,3}/g).join(',').split('').reverse().join('')
+  return `${e}`
+}
+
+let votes = chartValues(hours).reduce((sum, el) => sum += el, 0);
+let maxVotes = 2810057;
+$('#amount').html(commaMagic(votes));
+$('#percentage').html((votes/maxVotes*100).toFixed(2) + '%');
+
+setInterval(() => {
+  votes += 166;
+  $('#amount').html(commaMagic(votes));
+  $('#percentage').html((votes/maxVotes*100).toFixed(2) + '%');
+}, 10000);
